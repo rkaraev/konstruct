@@ -381,7 +381,7 @@ body {
     width: 250px;
     height: 40px;
     border: 1px solid var(--gray-color-3);
-    padding: 10px 100px 10px 15px;
+    padding: 10px 90px 10px 15px;
     color: var(--dark-blue-color);
     font-size: 14px;
     font-weight: 400;
@@ -699,18 +699,5 @@ body {
 
     .footer__address, .footer__telph {
         margin-bottom: 0;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    /* newsletter */
-    .newsletter__input {
-        width: 100px;
-        height: 25px;
-    }
-
-    .newsletter .button {
-        width: 75px;
-        height: 25px;
     }
 }
