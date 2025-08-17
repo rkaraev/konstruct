@@ -333,9 +333,10 @@ body {
 .get-in-touch {
     min-height: 498px;
     text-align: center;
-    background-image: url(../img/get-in-touch-bg.jpg);
+    background-image: url(../img/get-in-touch-bg.png);
     background-size: cover;
     background-position: center bottom;
+    background-color: var(--black-color-1);
 }
 
 .get-in-touch__text {
@@ -357,10 +358,11 @@ body {
 
 .newsletter__wrap {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 72px;
-    padding-top: 31px;
+    padding: 30px 0;
 }
 
 .newsletter__text {
@@ -372,6 +374,7 @@ body {
 
 .newsletter__form {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .newsletter__input {
@@ -396,7 +399,10 @@ body {
     padding-bottom: 30px;
 }
 
-.footer__left {
+.footer__left-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 255px;
     margin-right: 65px;
 }
@@ -406,6 +412,7 @@ body {
 }
 
 .footer__logo {
+    align-self: flex-start;
     margin-bottom: 15px;
 }
 
@@ -421,6 +428,7 @@ body {
 
 .footer__links-wrap {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footer__nav-1 {
@@ -449,9 +457,10 @@ body {
     color: #baebff;
 }
 
-.footer__right {
+.footer__right-wrap {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-right: 65px;
 }
 
@@ -510,8 +519,15 @@ body {
 }
 
 /* media */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
+    /* footer */
+    .footer__social {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
+@media screen and (max-width: 1024px) {
     /* general */
     .container {
         padding: 0 20px;
@@ -547,6 +563,47 @@ body {
     .our-capabilities__bottom {
         flex-wrap: wrap;
     }
+
+    /* footer */
+    .footer__content {
+        flex-direction: column;
+    }
+
+    .footer__left {
+        margin-bottom: 30px;
+    }
+
+    .footer__left-wrap {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 150px;
+        margin: 0;
+    }
+
+    .footer__logo {
+        align-self: center;
+    }
+
+    .footer__links-wrap {
+        justify-content: space-evenly;
+    }
+
+    .footer__center {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer__right-wrap {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-right: 0;
+    }
+
+    .footer__social {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -565,9 +622,27 @@ body {
         flex-direction: column;
         padding: 10px 10px;
     }
+
+    /* newsletter */
+    .newsletter__wrap {
+        gap: 20px;
+    }
+
+    /* footer */
+    .footer__left-wrap {
+        padding: 0 100px;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    /* general */
+    .button {
+        width: 100px;
+        height: 30px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+    }
 
     /* header */
     .header__title {
@@ -579,14 +654,6 @@ body {
     }
 
     /* our capabilities */
-    .our-capabilities .button {
-        width: 100px;
-        height: 30px;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.01em;
-    }
-
     .our-capabilities__card-title {
         font-size: 14px;
         font-weight: 700;
@@ -596,5 +663,54 @@ body {
     .our-capabilities__card-text {
         font-size: 11px;
         letter-spacing: 0.01em;
+    }
+
+    /* get-in-touch */
+    .get-in-touch__text {
+        font-size: 25px;
+    }
+
+    /* newsletter */
+    .newsletter__input {
+        width: 150px;
+        height: 30px;
+        padding: 5px 5px;
+        font-size: 11px;
+    }
+
+    /* footer */
+    .footer__left-wrap {
+        padding: 0 30px;
+    }
+
+    .footer__links-wrap {
+        padding: 0 100px;
+    }
+
+    .footer__nav-1, .footer__nav-2 {
+        margin-right: 0;
+    }
+
+    .footer__right-wrap {
+        justify-content: center;
+        gap: 20px;
+        padding: 0 50px;
+    }
+
+    .footer__address, .footer__telph {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    /* newsletter */
+    .newsletter__input {
+        width: 100px;
+        height: 25px;
+    }
+
+    .newsletter .button {
+        width: 75px;
+        height: 25px;
     }
 }
